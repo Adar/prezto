@@ -11,3 +11,25 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+source /Users/chris/.aliases
+setopt AUTO_CD
+setopt AUTO_PUSHD
+#setopt AUTO_NAME_DIRS
+setopt GLOB_COMPLETE
+setopt PUSHD_TO_HOME
+setopt PUSHD_IGNORE_DUPS
+setopt PUSHD_SILENT
+setopt RM_STAR_WAIT
+setopt ZLE
+setopt NO_HUP
+setopt NO_FLOW_CONTROL
+setopt NO_CASE_GLOB
+setopt NUMERIC_GLOB_SORT
+setopt EXTENDED_GLOB
+setopt RC_EXPAND_PARAM
+unsetopt CORRECT
+unsetopt CLOBBER
+bindkey -M vicmd "q" push-line
+bindkey -M viins ' ' magic-space
+
+test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
